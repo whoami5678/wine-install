@@ -1,0 +1,32 @@
+sudo dpkg --add-architecture i386
+
+wget -nc https://dl.winehq.org/wine-builds/winehq.key
+
+sudo apt-key add winehq.key
+
+
+Ahora mueve el archivo wine.list a la siguiente ruta 
+
+sudo mv wine.list /etc/apt/sources.list.d
+
+En caso de no contar con esta carpeta la creamos Abrimos una terminal escribimos cd etc/apt/
+Una ves estando en este directorio Escribimos el segundo comando
+
+sudo mkdir sources.list.d
+
+presionamos enter
+
+Ahora en la terminal escribe el siguiente comando
+
+sudo apt update
+
+selecciona una version que quieras de wine 
+
+Stable branch > sudo apt install --install-recommends winehq-stable
+
+Development branch > sudo apt install --install-recommends winehq-devel
+
+Staging branch > sudo apt install --install-recommends winehq-staging
+
+Ahora comensara la Descarga e instalacion solo presionas Y para continuar
+
